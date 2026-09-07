@@ -10,6 +10,7 @@
   var WHATSAPP_NUMBER = '972553068678';
   var PRODUCTS_URL = 'data/products.json';
   var SIZES = ['S', 'M', 'L', 'XL', 'XXL'];
+  var SHIRT_TYPES = ['בית', 'חוץ', 'שלישית'];
 
   /* ===== Mobile hamburger menu ===== */
   var hamburgerBtn = document.getElementById('hamburger-btn');
@@ -49,9 +50,9 @@
   var modalWhatsappLink = document.getElementById('modal-whatsapp-link');
   var lastFocusedEl = null;
 
-  function buildWhatsappUrl(productName, season, size) {
+  function buildWhatsappUrl(productName, season, size, type) {
     var message = productName
-      ? 'היי KICK11, אני מתעניין בחולצת ' + productName + (season ? ', עונה ' + season : '') + (size ? ', מידה ' + size : '') + '. אפשר לקבל פרטים?'
+      ? 'היי KICK11, אני מתעניין בחולצת ' + productName + (type ? ' - ' + type : '') + (season ? ', עונה ' + season : '') + (size ? ', מידה ' + size : '') + '. אפשר לקבל פרטים?'
       : 'היי KICK11, אני מחפש חולצה מסוימת. אפשר לקבל פרטים?';
     return 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
   }
@@ -406,6 +407,26 @@
       stockEl.hidden = false;
     }
 
+    var selectedType = null;
+    var typeOptions = document.getElementById('product-type-options');
+    SHIRT_TYPES.forEach(function (type) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'product-option';
+      btn.textContent = type;
+      btn.setAttribute('aria-pressed', 'false');
+      btn.addEventListener('click', function () {
+        typeOptions.querySelectorAll('.product-option').forEach(function (b) {
+          b.classList.remove('selected');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('selected');
+        btn.setAttribute('aria-pressed', 'true');
+        selectedType = type;
+      });
+      typeOptions.appendChild(btn);
+    });
+
     var selectedSize = null;
     var sizeOptions = document.getElementById('product-size-options');
     SIZES.forEach(function (size) {
@@ -432,7 +453,7 @@
       dmBtn.disabled = true;
     } else {
       dmBtn.addEventListener('click', function () {
-        openModal(buildWhatsappUrl(product.name, product.season, selectedSize));
+        openModal(buildWhatsappUrl(product.name, product.season, selectedSize, selectedType));
       });
     }
 
