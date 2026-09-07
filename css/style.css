@@ -994,6 +994,14 @@ h1, h2, h3 { font-weight: 700; margin: 0; letter-spacing: -0.01em; }
   outline: 1px solid var(--silver);
   outline-offset: 2px;
 }
+.product-option:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: rgba(192, 192, 192, 0.15);
+}
+.product-option:disabled:hover {
+  border-color: rgba(192, 192, 192, 0.15);
+}
 
 .product-dm-btn {
   width: 100%;

@@ -435,16 +435,21 @@
       btn.className = 'product-option';
       btn.textContent = option.label;
       btn.setAttribute('aria-pressed', 'false');
-      btn.addEventListener('click', function () {
-        typeOptions.querySelectorAll('.product-option').forEach(function (b) {
-          b.classList.remove('selected');
-          b.setAttribute('aria-pressed', 'false');
+
+      if (!hasImage) {
+        btn.disabled = true;
+      } else {
+        btn.addEventListener('click', function () {
+          typeOptions.querySelectorAll('.product-option').forEach(function (b) {
+            b.classList.remove('selected');
+            b.setAttribute('aria-pressed', 'false');
+          });
+          btn.classList.add('selected');
+          btn.setAttribute('aria-pressed', 'true');
+          selectedType = option.label;
+          showImage(images[option.key]);
         });
-        btn.classList.add('selected');
-        btn.setAttribute('aria-pressed', 'true');
-        selectedType = option.label;
-        showImage(images[option.key] || null);
-      });
+      }
       typeOptions.appendChild(btn);
 
       if (!selectedType && hasImage) {
