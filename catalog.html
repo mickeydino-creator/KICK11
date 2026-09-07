@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>הקטלוג המלא | KICK11</title>
+<meta name="description" content="KICK11 - כל החולצות שיש לנו להציע, קטלוג מלא.">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">דלג לתוכן הראשי</a>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="KICK11 - דף הבית">
+      <img src="assets/logo.jpg" alt="KICK11" class="brand-logo">
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="ניווט ראשי">
+      <ul>
+        <li><a href="catalog.html">חולצות</a></li>
+        <li><a href="index.html#story">הסיפור שלנו</a></li>
+        <li><a href="index.html#how-to-order">איך מזמינים</a></li>
+        <li><a href="index.html#contact">צור קשר</a></li>
+      </ul>
+    </nav>
+
+    <a class="header-instagram" href="https://www.instagram.com/kick.11_" target="_blank" rel="noopener" aria-label="KICK11 באינסטגרם">Instagram</a>
+
+    <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="פתיחת תפריט ניווט">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="ניווט למובייל" hidden>
+    <ul>
+      <li><a href="catalog.html">חולצות</a></li>
+      <li><a href="index.html#story">הסיפור שלנו</a></li>
+      <li><a href="index.html#how-to-order">איך מזמינים</a></li>
+      <li><a href="index.html#contact">צור קשר</a></li>
+      <li><a href="https://www.instagram.com/kick.11_" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <section class="page-header">
+    <div class="page-header-inner">
+      <h1>הקטלוג המלא</h1>
+      <p>כל החולצות שיש לנו להציע - עונה אחר עונה, נבחרת אחר נבחרת.</p>
+    </div>
+  </section>
+
+  <section class="catalog-section" aria-labelledby="catalog-title">
+    <h2 class="sr-only" id="catalog-title">כל החולצות</h2>
+    <ul class="catalog-grid" id="catalog-grid"></ul>
+
+    <div class="back-to-top-wrap">
+      <a href="index.html" class="catalog-link">חזרה לדף הבית ←</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.jpg" alt="KICK11" class="footer-logo">
+      <span class="footer-tagline">Football shirts. Real memories.</span>
+    </div>
+
+    <nav class="footer-nav" aria-label="ניווט בפוטר">
+      <ul>
+        <li><a href="catalog.html">חולצות</a></li>
+        <li><a href="index.html#story">הסיפור שלנו</a></li>
+        <li><a href="index.html#contact">צור קשר</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-social">
+      <a href="https://www.instagram.com/kick.11_" target="_blank" rel="noopener" aria-label="עקבו אחרינו באינסטגרם">Instagram</a>
+      <a href="https://wa.me/972553068678" target="_blank" rel="noopener" aria-label="דברו איתנו בוואטסאפ">WhatsApp</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 KICK11. כל הזכויות שמורות.</p>
+</footer>
+
+<div class="modal-overlay" id="dm-modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="dm-modal-title" id="modal-box">
+    <button class="modal-close" id="modal-close-btn" aria-label="סגירת חלון">&times;</button>
+    <h2 id="dm-modal-title">מתעניינים בחולצה?</h2>
+    <p class="modal-desc">שלחו לנו הודעה ונחזור אליכם עם פרטים על החולצה והזמינות.</p>
+    <div class="modal-links">
+      <a id="modal-whatsapp-link" href="#" target="_blank" rel="noopener" class="btn btn-primary modal-link">WhatsApp</a>
+      <a id="modal-instagram-link" href="https://www.instagram.com/kick.11_" target="_blank" rel="noopener" class="btn btn-secondary modal-link">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

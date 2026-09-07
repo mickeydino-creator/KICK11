@@ -1,85 +1,5 @@
 [
   {
-    "id": "barcelona-home",
-    "name": "ברצלונה - חולצת בית",
-    "season": "2024/25",
-    "price": "₪249",
-    "image": "assets/products/barcelona-home.jpg",
-    "status": "available",
-    "stock": null,
-    "featured": true
-  },
-  {
-    "id": "real-madrid-home",
-    "name": "ריאל מדריד - חולצת בית",
-    "season": "2024/25",
-    "price": "₪259",
-    "image": "assets/products/real-madrid-home.jpg",
-    "status": "available",
-    "stock": null,
-    "featured": true
-  },
-  {
-    "id": "man-city-home",
-    "name": "מנצ׳סטר סיטי - חולצת בית",
-    "season": "2024/25",
-    "price": "₪239",
-    "image": "assets/products/man-city-home.jpg",
-    "status": "last",
-    "stock": "נותרו 3 יחידות",
-    "featured": false
-  },
-  {
-    "id": "liverpool-home",
-    "name": "ליברפול - חולצת בית",
-    "season": "2024/25",
-    "price": "₪239",
-    "image": "assets/products/liverpool-home.jpg",
-    "status": "available",
-    "stock": null,
-    "featured": false
-  },
-  {
-    "id": "juventus-away",
-    "name": "יובנטוס - חולצת חוץ",
-    "season": "2024/25",
-    "price": "₪229",
-    "image": "assets/products/juventus-away.jpg",
-    "status": "coming-soon",
-    "stock": null,
-    "featured": false
-  },
-  {
-    "id": "psg-home",
-    "name": "פריז סן ז׳רמן - חולצת בית",
-    "season": "2024/25",
-    "price": "₪259",
-    "image": "assets/products/psg-home.jpg",
-    "status": "available",
-    "stock": null,
-    "featured": false
-  },
-  {
-    "id": "argentina-home",
-    "name": "נבחרת ארגנטינה - חולצת בית",
-    "season": "2024/25",
-    "price": "₪219",
-    "image": "assets/products/argentina-home.jpg",
-    "status": "available",
-    "stock": null,
-    "featured": false
-  },
-  {
-    "id": "brazil-home",
-    "name": "נבחרת ברזיל - חולצת בית",
-    "season": "2024/25",
-    "price": "₪219",
-    "image": "assets/products/brazil-home.jpg",
-    "status": "last",
-    "stock": "נותרה יחידה אחרונה",
-    "featured": false
-  },
-  {
     "id": "spain-home-worldcup2026",
     "name": "חולצת נבחרת ספרד בית",
     "season": "מונדיאל 2026",
@@ -87,7 +7,7 @@
     "image": "assets/products/spain-home-worldcup2026.jpg",
     "status": "available",
     "stock": null,
-    "featured": false
+    "featured": true
   },
   {
     "id": "spain-away-worldcup2026",
@@ -247,7 +167,7 @@
     "image": "assets/products/canada-third-worldcup2026.jpg",
     "status": "available",
     "stock": null,
-    "featured": false
+    "featured": true
   },
   {
     "id": "new-zealand-home-worldcup2026",
@@ -287,7 +207,7 @@
     "image": "assets/products/portugal-away-worldcup2026.jpg",
     "status": "available",
     "stock": null,
-    "featured": false
+    "featured": true
   },
   {
     "id": "croatia-away-worldcup2026",
@@ -537,7 +457,7 @@
     "image": "assets/products/france-home-worldcup2026.jpg",
     "status": "available",
     "stock": null,
-    "featured": false
+    "featured": true
   },
   {
     "id": "france-away-worldcup2026",
@@ -617,7 +537,7 @@
     "image": "assets/products/brazil-home-worldcup2026.jpg",
     "status": "available",
     "stock": null,
-    "featured": false
+    "featured": true
   },
   {
     "id": "norway-home-worldcup2026",
@@ -637,7 +557,7 @@
     "image": "assets/products/argentina-away-worldcup2026.jpg",
     "status": "available",
     "stock": null,
-    "featured": false
+    "featured": true
   },
   {
     "id": "czech-republic-home-worldcup2026",
@@ -667,7 +587,7 @@
     "image": "assets/products/england-home-worldcup2026.jpg",
     "status": "available",
     "stock": null,
-    "featured": false
+    "featured": true
   },
   {
     "id": "ireland-away-worldcup2026",
@@ -707,7 +627,7 @@
     "image": "assets/products/netherlands-home-worldcup2026.jpg",
     "status": "available",
     "stock": null,
-    "featured": false
+    "featured": true
   },
   {
     "id": "netherlands-away-worldcup2026",
@@ -727,7 +647,7 @@
     "image": "assets/products/mexico-third-worldcup2026.jpg",
     "status": "available",
     "stock": null,
-    "featured": false
+    "featured": true
   },
   {
     "id": "morocco-home-worldcup2026",

@@ -91,12 +91,18 @@
     }
   }
 
-  document.getElementById('open-cta-modal').addEventListener('click', function () {
-    openModal(buildWhatsappUrl(null, null));
-  });
-  document.getElementById('open-hero-modal').addEventListener('click', function () {
-    openModal(buildWhatsappUrl(null, null));
-  });
+  var ctaModalBtn = document.getElementById('open-cta-modal');
+  var heroModalBtn = document.getElementById('open-hero-modal');
+  if (ctaModalBtn) {
+    ctaModalBtn.addEventListener('click', function () {
+      openModal(buildWhatsappUrl(null, null));
+    });
+  }
+  if (heroModalBtn) {
+    heroModalBtn.addEventListener('click', function () {
+      openModal(buildWhatsappUrl(null, null));
+    });
+  }
 
   modalCloseBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', function (e) {
@@ -107,6 +113,7 @@
   var track = document.getElementById('carousel-track');
   var carouselWrap = document.querySelector('.carousel-wrap');
   var dotsWrap = document.getElementById('carousel-dots');
+  var catalogGrid = document.getElementById('catalog-grid');
 
   function renderProduct(product) {
     var li = document.createElement('li');
@@ -174,29 +181,50 @@
     return li;
   }
 
-  function showProductsError() {
-    carouselWrap.hidden = true;
+  function showProductsError(container) {
+    container.hidden = true;
     var message = document.createElement('p');
     message.className = 'products-error';
     message.textContent = 'לא הצלחנו לטעון את החולצות כרגע. נסו לרענן את הדף.';
-    carouselWrap.parentNode.insertBefore(message, carouselWrap.nextSibling);
+    container.parentNode.insertBefore(message, container.nextSibling);
   }
 
-  fetch(PRODUCTS_URL)
-    .then(function (res) {
-      if (!res.ok) throw new Error('Failed to load products');
-      return res.json();
-    })
-    .then(function (products) {
-      if (!Array.isArray(products) || !products.length) throw new Error('Empty product list');
-      products.forEach(function (product) {
-        track.appendChild(renderProduct(product));
+  if (track) {
+    fetch(PRODUCTS_URL)
+      .then(function (res) {
+        if (!res.ok) throw new Error('Failed to load products');
+        return res.json();
+      })
+      .then(function (products) {
+        if (!Array.isArray(products) || !products.length) throw new Error('Empty product list');
+        var featured = products.filter(function (p) { return p.featured; });
+        var homeProducts = featured.length ? featured : products.slice(0, 8);
+        homeProducts.forEach(function (product) {
+          track.appendChild(renderProduct(product));
+        });
+        initCarousel();
+      })
+      .catch(function () {
+        showProductsError(carouselWrap);
       });
-      initCarousel();
-    })
-    .catch(function () {
-      showProductsError();
-    });
+  }
+
+  if (catalogGrid) {
+    fetch(PRODUCTS_URL)
+      .then(function (res) {
+        if (!res.ok) throw new Error('Failed to load products');
+        return res.json();
+      })
+      .then(function (products) {
+        if (!Array.isArray(products) || !products.length) throw new Error('Empty product list');
+        products.forEach(function (product) {
+          catalogGrid.appendChild(renderProduct(product));
+        });
+      })
+      .catch(function () {
+        showProductsError(catalogGrid);
+      });
+  }
 
   /* ===== Carousel ===== */
   function initCarousel() {
