@@ -10,13 +10,6 @@
   var WHATSAPP_NUMBER = '972553068678';
   var PRODUCTS_URL = 'data/products.json';
   var SIZES = ['S', 'M', 'L', 'XL', 'XXL'];
-  var TYPE_LABELS = { home: 'בית', away: 'חוץ', third: 'שלישית' };
-
-  function parseVariant(id) {
-    var m = /^(.+)-(home|away|third)-worldcup2026$/.exec(id);
-    if (!m) return null;
-    return { base: m[1], type: m[2] };
-  }
 
   /* ===== Mobile hamburger menu ===== */
   var hamburgerBtn = document.getElementById('hamburger-btn');
@@ -125,7 +118,7 @@
 
   function renderProduct(product) {
     var li = document.createElement('li');
-    li.className = 'product-card reveal';
+    li.className = 'product-card';
 
     var badge = document.createElement('span');
     badge.className = 'badge badge-' + product.status;
@@ -220,7 +213,6 @@
           track.appendChild(renderProduct(product));
         });
         initCarousel();
-        initScrollReveal();
       })
       .catch(function () {
         showProductsError(carouselWrap);
@@ -244,7 +236,9 @@
 
       catalogGrid.innerHTML = '';
       filtered.forEach(function (product) {
-        catalogGrid.appendChild(renderProduct(product));
+        var card = renderProduct(product);
+        card.classList.add('reveal');
+        catalogGrid.appendChild(card);
       });
       catalogEmpty.hidden = filtered.length > 0;
       initScrollReveal();
@@ -372,7 +366,7 @@
           notFoundEl.hidden = false;
           return;
         }
-        renderProductDetail(product, products);
+        renderProductDetail(product);
       })
       .catch(function () {
         loadingEl.hidden = true;
@@ -380,7 +374,7 @@
       });
   }
 
-  function renderProductDetail(product, allProducts) {
+  function renderProductDetail(product) {
     document.title = product.name + ' | KICK11';
     document.getElementById('product-breadcrumb-current').textContent = product.name;
 
@@ -431,31 +425,6 @@
       });
       sizeOptions.appendChild(btn);
     });
-
-    var variant = parseVariant(product.id);
-    if (variant) {
-      var siblings = allProducts.filter(function (p) {
-        var v = parseVariant(p.id);
-        return v && v.base === variant.base;
-      });
-      if (siblings.length > 1) {
-        var typeGroup = document.getElementById('product-type-group');
-        var typeOptions = document.getElementById('product-type-options');
-        typeGroup.hidden = false;
-        siblings.forEach(function (sibling) {
-          var siblingVariant = parseVariant(sibling.id);
-          var btn = document.createElement('a');
-          btn.className = 'product-option';
-          btn.href = 'product.html?id=' + encodeURIComponent(sibling.id);
-          btn.textContent = TYPE_LABELS[siblingVariant.type] || siblingVariant.type;
-          if (sibling.id === product.id) {
-            btn.classList.add('selected');
-            btn.setAttribute('aria-current', 'true');
-          }
-          typeOptions.appendChild(btn);
-        });
-      }
-    }
 
     var dmBtn = document.getElementById('product-dm-btn');
     if (product.status === 'coming-soon') {
