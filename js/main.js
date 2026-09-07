@@ -20,7 +20,7 @@
     'last': 'אחרון!'
   };
 
-  var WHATSAPP_NUMBER = '972501234567';
+  var WHATSAPP_NUMBER = '972553068678';
 
   /* ===== Mobile hamburger menu ===== */
   var hamburgerBtn = document.getElementById('hamburger-btn');
