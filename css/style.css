@@ -777,16 +777,20 @@ h1, h2, h3 { font-weight: 700; margin: 0; letter-spacing: -0.01em; }
 }
 
 .catalog-search {
-  flex: 1 1 260px;
+  flex: 1 1 auto;
+  min-width: 200px;
   max-width: 360px;
+  height: 44px;
   background: var(--black-900);
   border: 1px solid rgba(192, 192, 192, 0.25);
   border-radius: var(--radius);
   color: var(--white);
-  padding: 12px 16px;
+  padding: 0 16px;
   font-size: 0.92rem;
   font-family: var(--font);
   transition: border-color var(--transition);
+  -webkit-appearance: none;
+  appearance: none;
 }
 .catalog-search::placeholder { color: var(--silver-dark); }
 .catalog-search:focus {
@@ -865,6 +869,6 @@ h1, h2, h3 { font-weight: 700; margin: 0; letter-spacing: -0.01em; }
   .footer-inner { flex-direction: column; text-align: center; justify-content: center; }
   .catalog-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
   .catalog-controls { flex-direction: column; align-items: stretch; }
-  .catalog-search { max-width: none; }
+  .catalog-search { max-width: none; width: 100%; }
   .catalog-filters { justify-content: center; }
 }
