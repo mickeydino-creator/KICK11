@@ -9,6 +9,14 @@
 
   var WHATSAPP_NUMBER = '972553068678';
   var PRODUCTS_URL = 'data/products.json';
+  var SIZES = ['S', 'M', 'L', 'XL', 'XXL'];
+  var TYPE_LABELS = { home: 'בית', away: 'חוץ', third: 'שלישית' };
+
+  function parseVariant(id) {
+    var m = /^(.+)-(home|away|third)-worldcup2026$/.exec(id);
+    if (!m) return null;
+    return { base: m[1], type: m[2] };
+  }
 
   /* ===== Mobile hamburger menu ===== */
   var hamburgerBtn = document.getElementById('hamburger-btn');
@@ -48,9 +56,9 @@
   var modalWhatsappLink = document.getElementById('modal-whatsapp-link');
   var lastFocusedEl = null;
 
-  function buildWhatsappUrl(productName, season) {
+  function buildWhatsappUrl(productName, season, size) {
     var message = productName
-      ? 'היי KICK11, אני מתעניין בחולצת ' + productName + (season ? ', עונה ' + season : '') + '. אפשר לקבל פרטים?'
+      ? 'היי KICK11, אני מתעניין בחולצת ' + productName + (season ? ', עונה ' + season : '') + (size ? ', מידה ' + size : '') + '. אפשר לקבל פרטים?'
       : 'היי KICK11, אני מחפש חולצה מסוימת. אפשר לקבל פרטים?';
     return 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
   }
@@ -117,12 +125,17 @@
 
   function renderProduct(product) {
     var li = document.createElement('li');
-    li.className = 'product-card';
+    li.className = 'product-card reveal';
 
     var badge = document.createElement('span');
     badge.className = 'badge badge-' + product.status;
     badge.textContent = STATUS_LABELS[product.status] || '';
     li.appendChild(badge);
+
+    var imageLink = document.createElement('a');
+    imageLink.className = 'product-image-link';
+    imageLink.href = 'product.html?id=' + encodeURIComponent(product.id);
+    imageLink.setAttribute('aria-label', product.name);
 
     var image = document.createElement('div');
     image.className = 'product-image';
@@ -140,11 +153,15 @@
     } else {
       image.classList.add('product-image-placeholder');
     }
-    li.appendChild(image);
+    imageLink.appendChild(image);
+    li.appendChild(imageLink);
 
     var name = document.createElement('h3');
     name.className = 'product-name';
-    name.textContent = product.name;
+    var nameLink = document.createElement('a');
+    nameLink.href = 'product.html?id=' + encodeURIComponent(product.id);
+    nameLink.textContent = product.name;
+    name.appendChild(nameLink);
     li.appendChild(name);
 
     var season = document.createElement('p');
@@ -203,6 +220,7 @@
           track.appendChild(renderProduct(product));
         });
         initCarousel();
+        initScrollReveal();
       })
       .catch(function () {
         showProductsError(carouselWrap);
@@ -229,6 +247,7 @@
         catalogGrid.appendChild(renderProduct(product));
       });
       catalogEmpty.hidden = filtered.length > 0;
+      initScrollReveal();
     }
 
     catalogSearch.addEventListener('input', renderCatalog);
@@ -332,5 +351,151 @@
 
     updateDots();
   }
+
+  /* ===== Product detail page ===== */
+  var productDetail = document.getElementById('product-detail');
+  if (productDetail) {
+    var params = new URLSearchParams(window.location.search);
+    var productId = params.get('id');
+    var loadingEl = document.getElementById('product-loading');
+    var notFoundEl = document.getElementById('product-not-found');
+
+    fetch(PRODUCTS_URL)
+      .then(function (res) {
+        if (!res.ok) throw new Error('Failed to load products');
+        return res.json();
+      })
+      .then(function (products) {
+        var product = products.filter(function (p) { return p.id === productId; })[0];
+        loadingEl.hidden = true;
+        if (!product) {
+          notFoundEl.hidden = false;
+          return;
+        }
+        renderProductDetail(product, products);
+      })
+      .catch(function () {
+        loadingEl.hidden = true;
+        notFoundEl.hidden = false;
+      });
+  }
+
+  function renderProductDetail(product, allProducts) {
+    document.title = product.name + ' | KICK11';
+    document.getElementById('product-breadcrumb-current').textContent = product.name;
+
+    var badge = document.getElementById('product-badge');
+    badge.className = 'badge badge-' + product.status;
+    badge.textContent = STATUS_LABELS[product.status] || '';
+
+    var imageWrap = document.getElementById('product-detail-image');
+    if (product.image) {
+      var img = document.createElement('img');
+      img.src = product.image;
+      img.alt = product.name;
+      img.addEventListener('error', function () {
+        img.remove();
+        imageWrap.classList.add('product-image-placeholder');
+      });
+      imageWrap.appendChild(img);
+    } else {
+      imageWrap.classList.add('product-image-placeholder');
+    }
+
+    document.getElementById('product-detail-title').textContent = product.name;
+    document.getElementById('product-detail-season').textContent = 'עונה ' + product.season;
+    document.getElementById('product-detail-price').textContent = product.price;
+
+    var stockEl = document.getElementById('product-detail-stock');
+    if (product.stock) {
+      stockEl.textContent = product.stock;
+      stockEl.hidden = false;
+    }
+
+    var selectedSize = null;
+    var sizeOptions = document.getElementById('product-size-options');
+    SIZES.forEach(function (size) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'product-option';
+      btn.textContent = size;
+      btn.setAttribute('aria-pressed', 'false');
+      btn.addEventListener('click', function () {
+        sizeOptions.querySelectorAll('.product-option').forEach(function (b) {
+          b.classList.remove('selected');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('selected');
+        btn.setAttribute('aria-pressed', 'true');
+        selectedSize = size;
+      });
+      sizeOptions.appendChild(btn);
+    });
+
+    var variant = parseVariant(product.id);
+    if (variant) {
+      var siblings = allProducts.filter(function (p) {
+        var v = parseVariant(p.id);
+        return v && v.base === variant.base;
+      });
+      if (siblings.length > 1) {
+        var typeGroup = document.getElementById('product-type-group');
+        var typeOptions = document.getElementById('product-type-options');
+        typeGroup.hidden = false;
+        siblings.forEach(function (sibling) {
+          var siblingVariant = parseVariant(sibling.id);
+          var btn = document.createElement('a');
+          btn.className = 'product-option';
+          btn.href = 'product.html?id=' + encodeURIComponent(sibling.id);
+          btn.textContent = TYPE_LABELS[siblingVariant.type] || siblingVariant.type;
+          if (sibling.id === product.id) {
+            btn.classList.add('selected');
+            btn.setAttribute('aria-current', 'true');
+          }
+          typeOptions.appendChild(btn);
+        });
+      }
+    }
+
+    var dmBtn = document.getElementById('product-dm-btn');
+    if (product.status === 'coming-soon') {
+      dmBtn.textContent = 'בקרוב';
+      dmBtn.disabled = true;
+    } else {
+      dmBtn.addEventListener('click', function () {
+        openModal(buildWhatsappUrl(product.name, product.season, selectedSize));
+      });
+    }
+
+    productDetail.hidden = false;
+    initScrollReveal();
+  }
+
+  /* ===== Scroll reveal (mobile-friendly, respects reduced motion) ===== */
+  function initScrollReveal() {
+    var elements = document.querySelectorAll('.reveal:not(.reveal-ready)');
+    if (!elements.length) return;
+
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    elements.forEach(function (el) { el.classList.add('reveal-ready'); });
+
+    if (prefersReducedMotion || typeof IntersectionObserver === 'undefined') {
+      elements.forEach(function (el) { el.classList.add('reveal-visible'); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+
+    elements.forEach(function (el) { observer.observe(el); });
+  }
+
+  initScrollReveal();
 
 })();

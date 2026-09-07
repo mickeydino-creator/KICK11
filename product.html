@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>הקטלוג המלא | KICK11</title>
-<meta name="description" content="KICK11 - כל החולצות שיש לנו להציע, קטלוג מלא.">
+<title>חולצה | KICK11</title>
+<meta name="description" content="KICK11 - פרטי חולצה, בחירת מידה ויצירת קשר.">
 <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,34 +50,47 @@
 
 <main id="main-content">
 
-  <section class="page-header reveal">
-    <div class="page-header-inner">
-      <h1>הקטלוג המלא</h1>
-      <p>כל החולצות שיש לנו להציע - עונה אחר עונה, נבחרת אחר נבחרת.</p>
+  <nav class="product-breadcrumb reveal" aria-label="נתיב ניווט">
+    <a href="catalog.html">הקטלוג המלא</a>
+    <span aria-hidden="true">/</span>
+    <span id="product-breadcrumb-current"></span>
+  </nav>
+
+  <div id="product-loading" class="product-loading">טוען חולצה...</div>
+  <p id="product-not-found" class="products-error" hidden>החולצה המבוקשת לא נמצאה. <a href="catalog.html" class="catalog-link">חזרה לקטלוג</a></p>
+
+  <section class="product-detail reveal" id="product-detail" hidden aria-labelledby="product-detail-title">
+    <div class="product-detail-media">
+      <span class="badge" id="product-badge"></span>
+      <div class="product-detail-image" id="product-detail-image"></div>
+    </div>
+
+    <div class="product-detail-info">
+      <h1 id="product-detail-title"></h1>
+      <p class="product-detail-season" id="product-detail-season"></p>
+      <p class="product-detail-price" id="product-detail-price"></p>
+      <p class="product-detail-stock" id="product-detail-stock" hidden></p>
+
+      <div class="product-option-group" id="product-type-group" hidden>
+        <span class="product-option-label">סוג חולצה</span>
+        <div class="product-options" id="product-type-options" role="group" aria-label="בחירת סוג חולצה"></div>
+      </div>
+
+      <div class="product-option-group">
+        <span class="product-option-label" id="product-size-label">מידה</span>
+        <div class="product-options" id="product-size-options" role="group" aria-labelledby="product-size-label"></div>
+      </div>
+
+      <button class="btn btn-primary product-dm-btn" id="product-dm-btn" type="button">שליחת הודעה</button>
+
+      <p class="product-detail-note">המידה והסוג שנבחרו ישולבו אוטומטית בהודעה שתישלח אלינו.</p>
     </div>
   </section>
 
-  <section class="catalog-section" aria-labelledby="catalog-title">
-    <h2 class="sr-only" id="catalog-title">כל החולצות</h2>
-
-    <div class="catalog-controls reveal">
-      <label class="sr-only" for="catalog-search">חיפוש חולצה לפי שם</label>
-      <input type="search" id="catalog-search" class="catalog-search" placeholder="חיפוש לפי נבחרת...">
-
-      <div class="catalog-filters" role="group" aria-label="סינון לפי זמינות">
-        <button type="button" class="filter-chip active" data-status="all">הכל</button>
-        <button type="button" class="filter-chip" data-status="available">זמינה</button>
-        <button type="button" class="filter-chip" data-status="coming-soon">בקרוב</button>
-        <button type="button" class="filter-chip" data-status="last">אחרון!</button>
-      </div>
-    </div>
-
-    <p class="catalog-empty" id="catalog-empty" hidden>לא נמצאו חולצות תואמות לחיפוש.</p>
-
-    <ul class="catalog-grid" id="catalog-grid"></ul>
-
-    <div class="back-to-top-wrap">
-      <a href="index.html" class="catalog-link">חזרה לדף הבית ←</a>
+  <section class="story-section reveal" aria-labelledby="product-story-title">
+    <div class="story-inner">
+      <h2 id="product-story-title">הסיפור שלנו</h2>
+      <p>KICK11 נולד מאהבה לחולצות כדורגל - לא רק למה שיש עליהן, אלא למה שהן מזכירות. עונה אחת, שחקן אחד, משחק אחד שכולם זוכרים.</p>
     </div>
   </section>
 
