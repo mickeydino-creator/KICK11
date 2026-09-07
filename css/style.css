@@ -134,7 +134,12 @@ h1, h2, h3 { font-weight: 700; margin: 0; letter-spacing: -0.01em; }
 }
 
 .brand { display: flex; align-items: center; }
-.brand-logo { height: 26px; width: auto; }
+.brand-logo {
+  width: 150px;
+  height: 38px;
+  object-fit: cover;
+  object-position: center;
+}
 
 .main-nav ul {
   display: flex;
@@ -367,26 +372,32 @@ h1, h2, h3 { font-weight: 700; margin: 0; letter-spacing: -0.01em; }
   border-radius: var(--radius);
   padding: 20px;
   position: relative;
-  transition: transform var(--transition), border-color var(--transition);
+  transition: transform var(--transition), border-color var(--transition), border-radius var(--transition), background var(--transition), box-shadow var(--transition);
 }
 .product-card:hover {
   transform: translateY(-4px);
-  border-color: var(--silver-dark);
+  border-color: transparent;
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
 }
 
 .product-image {
+  --grid-color: rgba(114, 114, 114, 0.3);
   aspect-ratio: 4 / 5;
   border-radius: var(--radius);
   margin-bottom: 18px;
-  background: linear-gradient(150deg, #1c1c1c, #0a0a0a 65%);
   position: relative;
   overflow: hidden;
+  background-color: #191a1a;
+  background-image:
+    linear-gradient(0deg, transparent 24%, var(--grid-color) 25%, var(--grid-color) 26%, transparent 27%, transparent 74%, var(--grid-color) 75%, var(--grid-color) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--grid-color) 25%, var(--grid-color) 26%, transparent 27%, transparent 74%, var(--grid-color) 75%, var(--grid-color) 76%, transparent 77%, transparent);
+  background-size: 55px 55px;
+  transition: border-radius var(--transition);
 }
-.product-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(192, 192, 192, 0.1), transparent 45%);
+.product-card:hover .product-image {
+  border-radius: 22px;
 }
 
 .badge {
@@ -560,7 +571,12 @@ h1, h2, h3 { font-weight: 700; margin: 0; letter-spacing: -0.01em; }
   align-items: center;
   gap: 16px;
 }
-.footer-logo { height: 20px; width: auto; }
+.footer-logo {
+  width: 120px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+}
 .footer-tagline {
   font-size: 0.82rem;
   color: var(--silver-dark);
