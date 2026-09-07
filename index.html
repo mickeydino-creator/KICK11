@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ארכיון | חולצות כדורגל וינטג׳ פרימיום</title>
-<meta name="description" content="ארכיון - חולצות כדורגל וינטג׳ נבחרות ביד. כל חולצה מספרת רגע שהיה. אוסף מוגבל, למגן אמיתי בלבד.">
+<title>KICK11 | חולצות כדורגל עם משמעות</title>
+<meta name="description" content="KICK11 - חולצות מהעונות, מהשחקנים ומהרגעים שנשארו איתנו. מותג ישראלי לחובבי כדורגל.">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,18 +17,20 @@
 
 <header class="site-header" id="site-header">
   <div class="header-inner">
-    <a href="#top" class="brand" aria-label="ארכיון - דף הבית">
-      <img src="assets/logo.svg" alt="" width="40" height="40" class="brand-logo">
-      <span class="brand-name">ארכיון</span>
+    <a href="#top" class="brand" aria-label="KICK11 - דף הבית">
+      <img src="assets/logo.svg" alt="KICK11" class="brand-logo">
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="ניווט ראשי">
       <ul>
-        <li><a href="#collection">האוסף</a></li>
+        <li><a href="#products">חולצות</a></li>
         <li><a href="#story">הסיפור שלנו</a></li>
+        <li><a href="#how-to-order">איך מזמינים</a></li>
         <li><a href="#contact">צור קשר</a></li>
       </ul>
     </nav>
+
+    <a class="header-instagram" href="https://instagram.com/kick11.co" target="_blank" rel="noopener" aria-label="KICK11 באינסטגרם">Instagram</a>
 
     <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="פתיחת תפריט ניווט">
       <span></span><span></span><span></span>
@@ -37,9 +39,11 @@
 
   <nav class="mobile-nav" id="mobile-nav" aria-label="ניווט למובייל" hidden>
     <ul>
-      <li><a href="#collection">האוסף</a></li>
+      <li><a href="#products">חולצות</a></li>
       <li><a href="#story">הסיפור שלנו</a></li>
+      <li><a href="#how-to-order">איך מזמינים</a></li>
       <li><a href="#contact">צור קשר</a></li>
+      <li><a href="https://instagram.com/kick11.co" target="_blank" rel="noopener">Instagram</a></li>
     </ul>
   </nav>
 </header>
@@ -48,104 +52,69 @@
 
   <section class="hero" id="top">
     <div class="hero-content">
-      <h1 class="fade-in-up">הרגע שחגגת בו,<br>עדיין לובש אותך.</h1>
-      <p class="hero-tagline fade-in-up delay-1">חולצות כדורגל וינטג׳ נבחרות ביד. אוסף מוגבל, לזוכרים אמיתיים בלבד.</p>
+      <h1 class="fade-in-up">יש חולצות שאתה לובש.<br>ויש חולצות שאתה זוכר.</h1>
+      <p class="hero-tagline fade-in-up delay-1">חולצות מהעונות, מהשחקנים ומהרגעים שנשארו איתנו.</p>
       <div class="hero-ctas fade-in-up delay-2">
-        <a href="#collection" class="btn btn-primary">לצפייה באוסף</a>
-        <a href="https://wa.me/972501234567?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%90%D7%95%D7%A1%D7%A3%20%D7%A9%D7%9C%D7%9B%D7%9D" class="btn btn-secondary" target="_blank" rel="noopener">דברו איתנו בוואטסאפ</a>
+        <a href="#products" class="btn btn-primary">לצפייה בחולצות</a>
+        <button class="btn btn-secondary" id="open-hero-modal">דברו איתנו</button>
       </div>
     </div>
-    <a href="#collection" class="scroll-hint" aria-label="גלול למטה לצפייה באוסף">
+    <a href="#products" class="scroll-hint" aria-label="גלול למטה לצפייה בחולצות">
+      <span class="scroll-hint-text">גלול למטה</span>
       <span class="scroll-hint-line"></span>
     </a>
   </section>
 
-  <section class="collection-section" id="collection" aria-labelledby="collection-title">
+  <section class="products-section" id="products" aria-labelledby="products-title">
     <div class="section-head">
-      <h2 id="collection-title">האוסף</h2>
-      <p class="section-sub">כל חולצה - עידן, סיפור ומספר מוגבל של יחידות</p>
+      <h2 id="products-title">החולצות</h2>
+      <p class="section-sub">עונות שנשארו איתנו הרבה אחרי שריקת הסיום.</p>
     </div>
 
     <div class="carousel-wrap">
-      <button class="carousel-arrow carousel-arrow-prev" id="carousel-prev" aria-label="המוצר הקודם">&#10094;</button>
+      <button class="carousel-arrow carousel-arrow-prev" id="carousel-prev" aria-label="החולצה הקודמת">&#10094;</button>
 
-      <div class="carousel" id="carousel" tabindex="0" role="region" aria-label="קרוסלת מוצרים - השתמשו בחיצי המקלדת לניווט">
-        <ul class="carousel-track" id="carousel-track">
-
-          <li class="product-card">
-            <span class="badge badge-available">זמינה</span>
-            <div class="product-image" aria-hidden="true"></div>
-            <h3 class="product-name">עידן הזהב</h3>
-            <p class="product-era">נבחרת צרפת · 1998-2000</p>
-            <p class="product-price">350 ₪</p>
-            <button class="btn btn-dm" data-product="עידן הזהב - נבחרת צרפת 1998-2000">שלח DM</button>
-          </li>
-
-          <li class="product-card">
-            <span class="badge badge-available">זמינה</span>
-            <div class="product-image" aria-hidden="true"></div>
-            <h3 class="product-name">האולטראס</h3>
-            <p class="product-era">חולצת בית איטליה · 2001-2003</p>
-            <p class="product-price">320 ₪</p>
-            <button class="btn btn-dm" data-product="האולטראס - חולצת בית איטליה 2001-2003">שלח DM</button>
-          </li>
-
-          <li class="product-card">
-            <span class="badge badge-last">אחרון!</span>
-            <div class="product-image" aria-hidden="true"></div>
-            <h3 class="product-name">המלכים הלבנים</h3>
-            <p class="product-era">ריאל מדריד וינטג׳ · 1999-2001</p>
-            <p class="product-price">380 ₪</p>
-            <button class="btn btn-dm" data-product="המלכים הלבנים - ריאל מדריד וינטג׳ 1999-2001">שלח DM</button>
-          </li>
-
-          <li class="product-card">
-            <span class="badge badge-available">זמינה</span>
-            <div class="product-image" aria-hidden="true"></div>
-            <h3 class="product-name">הצהובים הגדולים</h3>
-            <p class="product-era">בורוסיה דורטמונד · 2004-2006</p>
-            <p class="product-price">300 ₪</p>
-            <button class="btn btn-dm" data-product="הצהובים הגדולים - בורוסיה דורטמונד 2004-2006">שלח DM</button>
-          </li>
-
-          <li class="product-card">
-            <span class="badge badge-soon">בקרוב</span>
-            <div class="product-image" aria-hidden="true"></div>
-            <h3 class="product-name">האדומים הנצחיים</h3>
-            <p class="product-era">ליברפול וינטג׳ · 1995-1997</p>
-            <p class="product-price">400 ₪</p>
-            <button class="btn btn-dm" data-product="האדומים הנצחיים - ליברפול וינטג׳ 1995-1997" disabled>בקרוב</button>
-          </li>
-
-          <li class="product-card">
-            <span class="badge badge-available">זמינה</span>
-            <div class="product-image" aria-hidden="true"></div>
-            <h3 class="product-name">הכוכבים הכחולים</h3>
-            <p class="product-era">נבחרת ברזיל · 2002-2004</p>
-            <p class="product-price">340 ₪</p>
-            <button class="btn btn-dm" data-product="הכוכבים הכחולים - נבחרת ברזיל 2002-2004">שלח DM</button>
-          </li>
-
-        </ul>
+      <div class="carousel" id="carousel" tabindex="0" role="region" aria-label="קרוסלת חולצות - השתמשו בחיצי המקלדת לניווט">
+        <ul class="carousel-track" id="carousel-track"></ul>
       </div>
 
-      <button class="carousel-arrow carousel-arrow-next" id="carousel-next" aria-label="המוצר הבא">&#10095;</button>
+      <button class="carousel-arrow carousel-arrow-next" id="carousel-next" aria-label="החולצה הבאה">&#10095;</button>
     </div>
 
-    <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="ניווט בין מוצרים"></div>
+    <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="ניווט בין חולצות"></div>
+  </section>
+
+  <section class="how-section" id="how-to-order" aria-labelledby="how-title">
+    <div class="section-head">
+      <h2 id="how-title">איך מזמינים</h2>
+    </div>
+    <ol class="how-steps">
+      <li class="how-step">
+        <span class="how-step-num">01</span>
+        <p>בוחרים חולצה מהקטלוג</p>
+      </li>
+      <li class="how-step">
+        <span class="how-step-num">02</span>
+        <p>שולחים לנו הודעה בוואטסאפ או באינסטגרם</p>
+      </li>
+      <li class="how-step">
+        <span class="how-step-num">03</span>
+        <p>מאשרים מידה וזמינות, ואנחנו דואגים לשאר</p>
+      </li>
+    </ol>
   </section>
 
   <section class="story-section" id="story" aria-labelledby="story-title">
     <div class="story-inner">
       <h2 id="story-title">הסיפור שלנו</h2>
-      <p>התחלנו מתא אחד בארון וחולצה ישנה שאף אחד לא זכר מאיפה הגיעה. גילינו שכל חולצה כזאת היא לא בד - היא תיעוד. משחק שראית עם אבא, קיץ שבו לא הפסקת לצפות בטלוויזיה, שם של שחקן שרצית להיות. ״ארכיון״ קיים כדי לשמר את הרגעים האלה ולהעביר אותם הלאה, פריט אחד בכל פעם.</p>
+      <p>KICK11 נולד מאהבה לחולצות כדורגל - לא רק למה שיש עליהן, אלא למה שהן מזכירות. עונה אחת, שחקן אחד, משחק אחד שכולם זוכרים. אנחנו אוספים את הרגעים האלה והופכים אותם לחולצות שאפשר ללבוש גם היום.</p>
     </div>
   </section>
 
   <section class="cta-section" id="contact" aria-labelledby="cta-title">
     <div class="cta-inner">
-      <h2 id="cta-title">מחפשים חולצה ספציפית?</h2>
-      <p>ספרו לנו איזה רגע אתם מחפשים - ואנחנו נחפש אותו בשבילכם.</p>
+      <h2 id="cta-title">מחפשים חולצה מסוימת?</h2>
+      <p>ספרו לנו איזו חולצה אתם מחפשים. אולי היא כבר בדרך אלינו.</p>
       <button class="btn btn-primary" id="open-cta-modal">דברו איתנו</button>
     </div>
   </section>
@@ -155,36 +124,34 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="assets/logo.svg" alt="" width="32" height="32">
-      <span>ארכיון</span>
+      <img src="assets/logo.svg" alt="KICK11" class="footer-logo">
+      <span class="footer-tagline">Football shirts. Real memories.</span>
     </div>
 
     <nav class="footer-nav" aria-label="ניווט בפוטר">
       <ul>
-        <li><a href="#top">בית</a></li>
-        <li><a href="#collection">האוסף</a></li>
+        <li><a href="#products">חולצות</a></li>
         <li><a href="#story">הסיפור שלנו</a></li>
         <li><a href="#contact">צור קשר</a></li>
       </ul>
     </nav>
 
     <div class="footer-social">
-      <a href="https://instagram.com/archive.shirts" target="_blank" rel="noopener" aria-label="עקבו אחרינו באינסטגרם">אינסטגרם</a>
-      <a href="https://wa.me/972501234567" target="_blank" rel="noopener" aria-label="דברו איתנו בוואטסאפ">וואטסאפ</a>
+      <a href="https://instagram.com/kick11.co" target="_blank" rel="noopener" aria-label="עקבו אחרינו באינסטגרם">Instagram</a>
+      <a href="https://wa.me/972501234567" target="_blank" rel="noopener" aria-label="דברו איתנו בוואטסאפ">WhatsApp</a>
     </div>
   </div>
-  <p class="footer-copy">© 2026 ארכיון. כל הזכויות שמורות.</p>
+  <p class="footer-copy">© 2026 KICK11. כל הזכויות שמורות.</p>
 </footer>
 
 <div class="modal-overlay" id="dm-modal" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="dm-modal-title" id="modal-box">
     <button class="modal-close" id="modal-close-btn" aria-label="סגירת חלון">&times;</button>
-    <h2 id="dm-modal-title">בואו נדבר על החולצה</h2>
-    <p id="modal-product-line" class="modal-product-line"></p>
-    <p class="modal-desc">בחרו איך נוח לכם לפנות אלינו:</p>
+    <h2 id="dm-modal-title">מתעניינים בחולצה?</h2>
+    <p class="modal-desc">שלחו לנו הודעה ונחזור אליכם עם פרטים על החולצה והזמינות.</p>
     <div class="modal-links">
-      <a id="modal-whatsapp-link" href="#" target="_blank" rel="noopener" class="btn btn-primary modal-link">שליחת הודעה בוואטסאפ</a>
-      <a id="modal-instagram-link" href="https://ig.me/m/archive.shirts" target="_blank" rel="noopener" class="btn btn-secondary modal-link">שליחת DM באינסטגרם</a>
+      <a id="modal-whatsapp-link" href="#" target="_blank" rel="noopener" class="btn btn-primary modal-link">WhatsApp</a>
+      <a id="modal-instagram-link" href="https://instagram.com/kick11.co" target="_blank" rel="noopener" class="btn btn-secondary modal-link">Instagram</a>
     </div>
   </div>
 </div>
