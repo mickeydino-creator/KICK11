@@ -59,6 +59,21 @@
 
   <section class="catalog-section" aria-labelledby="catalog-title">
     <h2 class="sr-only" id="catalog-title">כל החולצות</h2>
+
+    <div class="catalog-controls">
+      <label class="sr-only" for="catalog-search">חיפוש חולצה לפי שם</label>
+      <input type="search" id="catalog-search" class="catalog-search" placeholder="חיפוש לפי נבחרת...">
+
+      <div class="catalog-filters" role="group" aria-label="סינון לפי זמינות">
+        <button type="button" class="filter-chip active" data-status="all">הכל</button>
+        <button type="button" class="filter-chip" data-status="available">זמינה</button>
+        <button type="button" class="filter-chip" data-status="coming-soon">בקרוב</button>
+        <button type="button" class="filter-chip" data-status="last">אחרון!</button>
+      </div>
+    </div>
+
+    <p class="catalog-empty" id="catalog-empty" hidden>לא נמצאו חולצות תואמות לחיפוש.</p>
+
     <ul class="catalog-grid" id="catalog-grid"></ul>
 
     <div class="back-to-top-wrap">

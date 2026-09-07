@@ -767,6 +767,71 @@ h1, h2, h3 { font-weight: 700; margin: 0; letter-spacing: -0.01em; }
   margin: 0 auto;
 }
 
+.catalog-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.catalog-search {
+  flex: 1 1 260px;
+  max-width: 360px;
+  background: var(--black-900);
+  border: 1px solid rgba(192, 192, 192, 0.25);
+  border-radius: var(--radius);
+  color: var(--white);
+  padding: 12px 16px;
+  font-size: 0.92rem;
+  font-family: var(--font);
+  transition: border-color var(--transition);
+}
+.catalog-search::placeholder { color: var(--silver-dark); }
+.catalog-search:focus {
+  outline: none;
+  border-color: var(--silver);
+}
+
+.catalog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-chip {
+  background: transparent;
+  border: 1px solid rgba(192, 192, 192, 0.25);
+  color: var(--silver);
+  border-radius: var(--radius);
+  padding: 9px 18px;
+  font-size: 0.85rem;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+.filter-chip:hover {
+  color: var(--white);
+  border-color: var(--silver-dark);
+}
+.filter-chip.active {
+  background: var(--white);
+  color: var(--black-950);
+  border-color: var(--white);
+}
+.filter-chip:focus-visible {
+  outline: 1px solid var(--silver);
+  outline-offset: 2px;
+}
+
+.catalog-empty {
+  text-align: center;
+  color: var(--silver);
+  padding: 40px 24px;
+}
+.catalog-empty[hidden] { display: none; }
+
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -799,4 +864,7 @@ h1, h2, h3 { font-weight: 700; margin: 0; letter-spacing: -0.01em; }
   .how-steps { grid-template-columns: 1fr; gap: 8px; }
   .footer-inner { flex-direction: column; text-align: center; justify-content: center; }
   .catalog-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
+  .catalog-controls { flex-direction: column; align-items: stretch; }
+  .catalog-search { max-width: none; }
+  .catalog-filters { justify-content: center; }
 }

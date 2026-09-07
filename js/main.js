@@ -210,6 +210,37 @@
   }
 
   if (catalogGrid) {
+    var catalogSearch = document.getElementById('catalog-search');
+    var catalogFilters = document.querySelectorAll('.filter-chip');
+    var catalogEmpty = document.getElementById('catalog-empty');
+    var allProducts = [];
+    var activeStatus = 'all';
+
+    function renderCatalog() {
+      var query = (catalogSearch.value || '').trim().toLowerCase();
+      var filtered = allProducts.filter(function (product) {
+        var matchesStatus = activeStatus === 'all' || product.status === activeStatus;
+        var matchesQuery = !query || product.name.toLowerCase().indexOf(query) !== -1;
+        return matchesStatus && matchesQuery;
+      });
+
+      catalogGrid.innerHTML = '';
+      filtered.forEach(function (product) {
+        catalogGrid.appendChild(renderProduct(product));
+      });
+      catalogEmpty.hidden = filtered.length > 0;
+    }
+
+    catalogSearch.addEventListener('input', renderCatalog);
+    catalogFilters.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        catalogFilters.forEach(function (c) { c.classList.remove('active'); });
+        chip.classList.add('active');
+        activeStatus = chip.getAttribute('data-status');
+        renderCatalog();
+      });
+    });
+
     fetch(PRODUCTS_URL)
       .then(function (res) {
         if (!res.ok) throw new Error('Failed to load products');
@@ -217,9 +248,8 @@
       })
       .then(function (products) {
         if (!Array.isArray(products) || !products.length) throw new Error('Empty product list');
-        products.forEach(function (product) {
-          catalogGrid.appendChild(renderProduct(product));
-        });
+        allProducts = products;
+        renderCatalog();
       })
       .catch(function () {
         showProductsError(catalogGrid);
