@@ -78,5 +78,705 @@
     "status": "last",
     "stock": "נותרה יחידה אחרונה",
     "featured": false
+  },
+  {
+    "id": "spain-home-worldcup2026",
+    "name": "חולצת נבחרת ספרד בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/spain-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "spain-away-worldcup2026",
+    "name": "חולצת נבחרת ספרד חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/spain-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "egypt-home-worldcup2026",
+    "name": "חולצת נבחרת מצרים בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/egypt-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "iraq-away-worldcup2026",
+    "name": "חולצת נבחרת עיראק חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/iraq-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "iraq-home-worldcup2026",
+    "name": "חולצת נבחרת עיראק בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/iraq-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "cape-verde-home-worldcup2026",
+    "name": "חולצת נבחרת קייפ ורדה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/cape-verde-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "cape-verde-away-worldcup2026",
+    "name": "חולצת נבחרת קייפ ורדה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/cape-verde-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "jordan-third-worldcup2026",
+    "name": "חולצת נבחרת ירדן שלישית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/jordan-third-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "jordan-away-worldcup2026",
+    "name": "חולצת נבחרת ירדן חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/jordan-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "jordan-home-worldcup2026",
+    "name": "חולצת נבחרת ירדן בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/jordan-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "australia-away-worldcup2026",
+    "name": "חולצת נבחרת אוסטרליה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/australia-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "bosnia-herzegovina-away-worldcup2026",
+    "name": "חולצת נבחרת בוסניה והרצגובינה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/bosnia-herzegovina-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "bosnia-herzegovina-home-worldcup2026",
+    "name": "חולצת נבחרת בוסניה והרצגובינה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/bosnia-herzegovina-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "austria-away-worldcup2026",
+    "name": "חולצת נבחרת אוסטריה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/austria-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "curacao-home-worldcup2026",
+    "name": "חולצת נבחרת קוראסאו בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/curacao-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "panama-third-worldcup2026",
+    "name": "חולצת נבחרת פנמה שלישית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/panama-third-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "canada-third-worldcup2026",
+    "name": "חולצת נבחרת קנדה שלישית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/canada-third-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "new-zealand-home-worldcup2026",
+    "name": "חולצת נבחרת ניו זילנד בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/new-zealand-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "panama-home-worldcup2026",
+    "name": "חולצת נבחרת פנמה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/panama-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "panama-away-worldcup2026",
+    "name": "חולצת נבחרת פנמה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/panama-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "portugal-away-worldcup2026",
+    "name": "חולצת נבחרת פורטוגל חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/portugal-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "croatia-away-worldcup2026",
+    "name": "חולצת נבחרת קרואטיה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/croatia-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "ecuador-home-worldcup2026",
+    "name": "חולצת נבחרת אקוודור בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/ecuador-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "norway-third-worldcup2026",
+    "name": "חולצת נבחרת נורווגיה שלישית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/norway-third-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "uruguay-home-worldcup2026",
+    "name": "חולצת נבחרת אורוגוואי בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/uruguay-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "morocco-away-worldcup2026",
+    "name": "חולצת נבחרת מרוקו חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/morocco-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "ghana-home-worldcup2026",
+    "name": "חולצת נבחרת גאנה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/ghana-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "croatia-home-worldcup2026",
+    "name": "חולצת נבחרת קרואטיה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/croatia-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "paraguay-away-worldcup2026",
+    "name": "חולצת נבחרת פרגוואי חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/paraguay-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "dr-congo-away-worldcup2026",
+    "name": "חולצת נבחרת קונגו חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/dr-congo-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "dr-congo-third-worldcup2026",
+    "name": "חולצת נבחרת קונגו שלישית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/dr-congo-third-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "dr-congo-home-worldcup2026",
+    "name": "חולצת נבחרת קונגו בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/dr-congo-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "uruguay-away-worldcup2026",
+    "name": "חולצת נבחרת אורוגוואי חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/uruguay-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "canada-away-worldcup2026",
+    "name": "חולצת נבחרת קנדה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/canada-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "chile-away-worldcup2026",
+    "name": "חולצת נבחרת צ'ילה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/chile-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "paraguay-home-worldcup2026",
+    "name": "חולצת נבחרת פרגוואי בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/paraguay-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "curacao-away-worldcup2026",
+    "name": "חולצת נבחרת קוראסאו חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/curacao-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "turkey-away-worldcup2026",
+    "name": "חולצת נבחרת טורקיה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/turkey-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "turkey-home-worldcup2026",
+    "name": "חולצת נבחרת טורקיה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/turkey-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "norway-away-worldcup2026",
+    "name": "חולצת נבחרת נורווגיה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/norway-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "venezuela-away-worldcup2026",
+    "name": "חולצת נבחרת ונצואלה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/venezuela-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "poland-away-worldcup2026",
+    "name": "חולצת נבחרת פולין חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/poland-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "poland-home-worldcup2026",
+    "name": "חולצת נבחרת פולין בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/poland-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "south-korea-away-worldcup2026",
+    "name": "חולצת נבחרת דרום קוריאה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/south-korea-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "egypt-away-worldcup2026",
+    "name": "חולצת נבחרת מצרים חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/egypt-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "france-home-worldcup2026",
+    "name": "חולצת נבחרת צרפת בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/france-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "france-away-worldcup2026",
+    "name": "חולצת נבחרת צרפת חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/france-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "south-africa-away-worldcup2026",
+    "name": "חולצת נבחרת דרום אפריקה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/south-africa-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "south-africa-home-worldcup2026",
+    "name": "חולצת נבחרת דרום אפריקה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/south-africa-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "sweden-away-worldcup2026",
+    "name": "חולצת נבחרת שוודיה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/sweden-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "england-away-worldcup2026",
+    "name": "חולצת נבחרת אנגליה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/england-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "colombia-away-worldcup2026",
+    "name": "חולצת נבחרת קולומביה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/colombia-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "japan-away-worldcup2026",
+    "name": "חולצת נבחרת יפן חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/japan-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "brazil-home-worldcup2026",
+    "name": "חולצת נבחרת ברזיל בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/brazil-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "norway-home-worldcup2026",
+    "name": "חולצת נבחרת נורווגיה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/norway-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "argentina-away-worldcup2026",
+    "name": "חולצת נבחרת ארגנטינה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/argentina-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "czech-republic-home-worldcup2026",
+    "name": "חולצת נבחרת צ'כיה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/czech-republic-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "romania-home-worldcup2026",
+    "name": "חולצת נבחרת רומניה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/romania-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "england-home-worldcup2026",
+    "name": "חולצת נבחרת אנגליה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/england-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "ireland-away-worldcup2026",
+    "name": "חולצת נבחרת אירלנד חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/ireland-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "ireland-home-worldcup2026",
+    "name": "חולצת נבחרת אירלנד בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/ireland-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "ivory-coast-home-worldcup2026",
+    "name": "חולצת נבחרת חוף השנהב בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/ivory-coast-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "netherlands-home-worldcup2026",
+    "name": "חולצת נבחרת הולנד בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/netherlands-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "netherlands-away-worldcup2026",
+    "name": "חולצת נבחרת הולנד חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/netherlands-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "mexico-third-worldcup2026",
+    "name": "חולצת נבחרת מקסיקו שלישית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/mexico-third-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "morocco-home-worldcup2026",
+    "name": "חולצת נבחרת מרוקו בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/morocco-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "austria-home-worldcup2026",
+    "name": "חולצת נבחרת אוסטריה בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/austria-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "belgium-away-worldcup2026",
+    "name": "חולצת נבחרת בלגיה חוץ",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/belgium-away-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "uae-home-worldcup2026",
+    "name": "חולצת נבחרת איחוד האמירויות בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/uae-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
+  },
+  {
+    "id": "qatar-home-worldcup2026",
+    "name": "חולצת נבחרת קטאר בית",
+    "season": "מונדיאל 2026",
+    "price": "$17.36",
+    "image": "assets/products/qatar-home-worldcup2026.jpg",
+    "status": "available",
+    "stock": null,
+    "featured": false
   }
 ]
