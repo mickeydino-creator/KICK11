@@ -10,7 +10,20 @@
   var WHATSAPP_NUMBER = '972553068678';
   var PRODUCTS_URL = 'data/products.json';
   var SIZES = ['S', 'M', 'L', 'XL', 'XXL'];
-  var SHIRT_TYPES = ['בית', 'חוץ', 'שלישית'];
+  var TYPE_OPTIONS = [
+    { key: 'home', label: 'בית' },
+    { key: 'away', label: 'חוץ' },
+    { key: 'third', label: 'שלישית' }
+  ];
+
+  function getDefaultImage(product) {
+    if (!product.images) return null;
+    for (var i = 0; i < TYPE_OPTIONS.length; i++) {
+      var path = product.images[TYPE_OPTIONS[i].key];
+      if (path) return path;
+    }
+    return null;
+  }
 
   /* ===== Mobile hamburger menu ===== */
   var hamburgerBtn = document.getElementById('hamburger-btn');
@@ -134,9 +147,10 @@
     var image = document.createElement('div');
     image.className = 'product-image';
     image.setAttribute('aria-hidden', 'true');
-    if (product.image) {
+    var defaultImage = getDefaultImage(product);
+    if (defaultImage) {
       var img = document.createElement('img');
-      img.src = product.image;
+      img.src = defaultImage;
       img.alt = '';
       img.loading = 'lazy';
       img.addEventListener('error', function () {
@@ -384,17 +398,21 @@
     badge.textContent = STATUS_LABELS[product.status] || '';
 
     var imageWrap = document.getElementById('product-detail-image');
-    if (product.image) {
-      var img = document.createElement('img');
-      img.src = product.image;
-      img.alt = product.name;
-      img.addEventListener('error', function () {
-        img.remove();
+    function showImage(path) {
+      imageWrap.innerHTML = '';
+      imageWrap.classList.remove('product-image-placeholder');
+      if (path) {
+        var img = document.createElement('img');
+        img.src = path;
+        img.alt = product.name;
+        img.addEventListener('error', function () {
+          img.remove();
+          imageWrap.classList.add('product-image-placeholder');
+        });
+        imageWrap.appendChild(img);
+      } else {
         imageWrap.classList.add('product-image-placeholder');
-      });
-      imageWrap.appendChild(img);
-    } else {
-      imageWrap.classList.add('product-image-placeholder');
+      }
     }
 
     document.getElementById('product-detail-title').textContent = product.name;
@@ -409,11 +427,13 @@
 
     var selectedType = null;
     var typeOptions = document.getElementById('product-type-options');
-    SHIRT_TYPES.forEach(function (type) {
+    var images = product.images || {};
+    TYPE_OPTIONS.forEach(function (option) {
+      var hasImage = !!images[option.key];
       var btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'product-option';
-      btn.textContent = type;
+      btn.textContent = option.label;
       btn.setAttribute('aria-pressed', 'false');
       btn.addEventListener('click', function () {
         typeOptions.querySelectorAll('.product-option').forEach(function (b) {
@@ -422,10 +442,19 @@
         });
         btn.classList.add('selected');
         btn.setAttribute('aria-pressed', 'true');
-        selectedType = type;
+        selectedType = option.label;
+        showImage(images[option.key] || null);
       });
       typeOptions.appendChild(btn);
+
+      if (!selectedType && hasImage) {
+        btn.classList.add('selected');
+        btn.setAttribute('aria-pressed', 'true');
+        selectedType = option.label;
+        showImage(images[option.key]);
+      }
     });
+    if (!selectedType) showImage(null);
 
     var selectedSize = null;
     var sizeOptions = document.getElementById('product-size-options');
